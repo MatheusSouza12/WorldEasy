@@ -94,4 +94,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <TextView
+        android:text="Voltar"
+        android:background="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvVoltar"
+        android:layout_below="@+id/btt_registrar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
 </RelativeLayout>

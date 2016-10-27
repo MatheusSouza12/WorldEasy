@@ -19,40 +19,10 @@
         android:orientation="horizontal"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_above="@+id/btt_registrar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Registrar"
-        android:onClick="registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btt_registrar"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_marginBottom="93dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:background="#F8F8FF"
-        android:ems="10"
-        android:hint="Senha"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/tx_senha"
-        android:layout_above="@+id/btt_entrar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="39dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignRight="@+id/btt_registrar"
+        android:layout_alignEnd="@+id/btt_registrar"
+        android:layout_alignLeft="@+id/btt_registrar"
+        android:layout_alignStart="@+id/btt_registrar" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -77,5 +47,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="62dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="#F8F8FF"
+        android:ems="10"
+        android:hint="Senha"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tx_senha"
+        android:layout_below="@+id/tx_email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Registrar"
+        android:onClick="registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btt_registrar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginBottom="77dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
