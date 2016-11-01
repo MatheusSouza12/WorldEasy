@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:background="#2b475e"
-    tools:context="com.example.matheus.worldeasy.LoginActivity"
+    tools:context="com.example.matheus.worldeasy.usuario.gui.LoginActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="horizontal">
@@ -14,15 +14,16 @@
         android:text="Entrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btt_entrar"
+        android:id="@+id/btn_entrar"
         android:gravity="center"
         android:orientation="horizontal"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_above="@+id/btt_registrar"
-        android:layout_alignRight="@+id/btt_registrar"
-        android:layout_alignEnd="@+id/btt_registrar"
-        android:layout_alignLeft="@+id/btt_registrar"
-        android:layout_alignStart="@+id/btt_registrar" />
+        android:layout_above="@+id/btn_registrar"
+        android:layout_alignRight="@+id/btn_registrar"
+        android:layout_alignEnd="@+id/btn_registrar"
+        android:layout_alignLeft="@+id/btn_registrar"
+        android:layout_alignStart="@+id/btn_registrar"
+        android:onClick="onButtonClick" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -66,10 +67,10 @@
 
     <Button
         android:text="Registrar"
-        android:onClick="registrar"
+        android:onClick="onButtonClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btt_registrar"
+        android:id="@+id/btn_registrar"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_marginBottom="77dp"
         android:layout_alignParentBottom="true"
