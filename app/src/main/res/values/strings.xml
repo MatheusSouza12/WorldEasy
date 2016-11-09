@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">worldeasy</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_anunciar_produto">AnunciarProdutoActivity</string>
 </resources>

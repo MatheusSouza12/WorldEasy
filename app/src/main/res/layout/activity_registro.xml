@@ -103,6 +103,7 @@
         android:id="@+id/tvVoltar"
         android:layout_below="@+id/btn_registrar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp" />
+        android:layout_marginTop="12dp"
+        android:onClick="onButtonClickUsuario"/>
 
 </RelativeLayout>

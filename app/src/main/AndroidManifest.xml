@@ -27,6 +27,10 @@
         <activity
             android:name=".usuario.gui.MainActivity"
             android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".produto.gui.AnunciarProdutoActivity"
+            android:label="@string/title_activity_anunciar_produto"
             android:theme="@style/AppTheme"></activity>
     </application>
 
