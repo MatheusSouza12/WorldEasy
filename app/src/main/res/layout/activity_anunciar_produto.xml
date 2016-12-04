@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2b475e"
-    tools:context="com.example.matheus.worldeasy.usuario.gui.RegistroActivity">
+    tools:context="com.example.matheus.worldeasy.produto.gui.AnunciarProdutoActivity">
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:background="#ffffff"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
         android:layout_below="@+id/tx_nomeproduto"
         android:layout_alignLeft="@+id/tx_nomeproduto"
         android:layout_alignStart="@+id/tx_nomeproduto"
@@ -29,7 +30,8 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:background="#ffffff"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
         android:id="@+id/tx_quantidade"
         android:hint="Quantidade"
         android:layout_marginTop="15dp"
@@ -45,7 +47,8 @@
         android:inputType="textPersonName"
         android:hint="Origem"
         android:ems="10"
-        android:background="#ffffff"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
         android:id="@+id/tx_origem"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/tx_tamanho_peso"
@@ -60,7 +63,8 @@
         android:inputType="textPersonName"
         android:hint="Impostos"
         android:ems="10"
-        android:background="#ffffff"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
         android:id="@+id/tx_impostos"
         android:layout_below="@+id/tx_origem"
         android:layout_alignLeft="@+id/tx_origem"
@@ -73,25 +77,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Nome do Produto"
-        android:ems="10"
-        android:background="#ffffff"
-        android:id="@+id/tx_nomeproduto"
-        android:singleLine="false"
-        android:layout_marginTop="46dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="Tamanho/Peso"
         android:ems="10"
-        android:background="#ffffff"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
         android:id="@+id/tx_tamanho_peso"
         android:layout_below="@+id/tx_quantidade"
         android:layout_alignParentLeft="true"
@@ -111,37 +100,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="Cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_cadastrarProduto"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp"
-        android:onClick="onButtonClickProduto"/>
-
-    <TextView
-        android:text="Selecione o Tipo do Produto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
-        android:id="@+id/textView2"
-        android:textSize="18sp"
-        android:layout_below="@+id/tx_impostos"
-        android:layout_alignRight="@+id/btn_cadastrarProduto"
-        android:layout_alignEnd="@+id/btn_cadastrarProduto" />
-
-    <CheckBox
-        android:text="Suplementos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_toLeftOf="@+id/btn_cadastrarProduto"
-        android:layout_toStartOf="@+id/btn_cadastrarProduto"
-        android:layout_marginTop="26dp"
-        android:id="@+id/cb_suplementos" />
-
     <CheckBox
         android:text="Roupas"
         android:layout_width="wrap_content"
@@ -153,17 +111,6 @@
         android:id="@+id/cb_roupas" />
 
     <CheckBox
-        android:text="Eletronicos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/cb_suplementos"
-        android:layout_toRightOf="@+id/cb_suplementos"
-        android:layout_toEndOf="@+id/cb_suplementos"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:id="@+id/cb_eletronicos" />
-
-    <CheckBox
         android:text="Perfumaria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -171,5 +118,64 @@
         android:layout_alignLeft="@+id/cb_eletronicos"
         android:layout_alignStart="@+id/cb_eletronicos"
         android:id="@+id/cb_perfumaria" />
+
+    <TextView
+        android:text="Selecione o Tipo do Produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:layout_below="@+id/tx_impostos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fundo_botao"
+        android:id="@+id/btn_cadastrarProduto"
+        android:onClick="onButtonClickProduto"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/cb_perfumaria"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:text="Eletronicos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_eletronicos"
+        android:layout_alignBaseline="@+id/cb_suplementos"
+        android:layout_alignBottom="@+id/cb_suplementos"
+        android:layout_alignRight="@+id/tx_cadastro_produto"
+        android:layout_alignEnd="@+id/tx_cadastro_produto" />
+
+    <CheckBox
+        android:text="Suplementos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/cb_suplementos"
+        android:layout_below="@+id/textView2"
+        android:layout_toLeftOf="@+id/cb_eletronicos"
+        android:layout_toStartOf="@+id/cb_eletronicos" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nome do Produto"
+        android:ems="10"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="5dp"
+        android:id="@+id/tx_nomeproduto"
+        android:singleLine="false"
+        android:layout_below="@+id/tx_cadastro_produto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 
 </RelativeLayout>

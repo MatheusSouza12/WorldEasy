@@ -12,10 +12,11 @@
 
     <Button
         android:text="Entrar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_CadastrarFornecedor"
         android:gravity="center"
+        android:background="@drawable/fundo_botao"
         android:orientation="horizontal"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_above="@+id/btn_registrar"
@@ -30,7 +31,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="Email"
-        android:background="#F8F8FF"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="10dp"
         android:ems="10"
         android:id="@+id/tx_email"
         android:layout_centerVertical="true"
@@ -53,7 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:background="#F8F8FF"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="10dp"
         android:ems="10"
         android:hint="Senha"
         android:layout_gravity="center_horizontal"
@@ -68,11 +71,12 @@
     <Button
         android:text="Registrar"
         android:onClick="onButtonClick"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_registrar"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_marginBottom="77dp"
+        android:background="@drawable/fundo_botao"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 

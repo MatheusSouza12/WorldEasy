@@ -28,17 +28,19 @@ public class AnunciarProdutoActivity extends AppCompatActivity {
 
     }
 
-    public void onButtonClickProduto(View v) {
+    public void onButtonClickProduto(View v) throws Exception {
         if (v.getId() == R.id.btn_cadastrarProduto) {
-            guiUtil.toastLong(getApplicationContext(), "Cadastro realizado com sucesso");
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-            startActivity(intent);
-            EditText nome = (EditText)findViewById(R.id.tx_nomeproduto);
-            EditText valor = (EditText)findViewById(R.id.tx_valor);
-            EditText quantidade = (EditText)findViewById(R.id.tx_quantidade);
-            EditText tamanhoPeso = (EditText)findViewById(R.id.tx_tamanho_peso);
+//            guiUtil.toastLong(getApplicationContext(), "Cadastro realizado com sucesso");
+//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//            startActivity(intent);
+
+            EditText nome = (EditText) findViewById(R.id.tx_nomeproduto);
+            EditText valor = (EditText) findViewById(R.id.tx_valor);
+            EditText quantidade = (EditText) findViewById(R.id.tx_quantidade);
+            EditText tamanhoPeso = (EditText) findViewById(R.id.tx_tamanho_peso);
             EditText origem = (EditText) findViewById(R.id.tx_origem);
             EditText impostos = (EditText) findViewById(R.id.tx_impostos);
+
 
             String nomeString = nome.getText().toString();
             String valorString = valor.getText().toString();
@@ -46,50 +48,49 @@ public class AnunciarProdutoActivity extends AppCompatActivity {
             String tamanhoPesoString = tamanhoPeso.getText().toString();
             String origemString = origem.getText().toString();
             String impostosString = impostos.getText().toString();
+            //String precoString=preco.getText().toString();
 
-            if (validacaoUtil.isFieldEmpty(nome)) {
-                nome.requestFocus();
-                nome.setError("Digite seu nome");
-                return;
-            }
-            if (validacaoUtil.isFieldEmpty(valor)) {
-                valor.requestFocus();
-                valor.setError("Digite o Valor");
-                return;
-            }
-            if (validacaoUtil.isFieldEmpty(quantidade)) {
-                quantidade.requestFocus();
-                quantidade.setError("Digite a Quantidade de Produtos");
-                return;
-            }
-            if (validacaoUtil.isFieldEmpty(tamanhoPeso)) {
-                tamanhoPeso.requestFocus();
-                tamanhoPeso.setError("Digite o Tamanho ou o Peso do Produto");
-                return;
-            }
-            if (validacaoUtil.isFieldEmpty(origem)) {
-                origem.requestFocus();
-                origem.setError("Digite a Origem do Produto");
-                return;
-            }
-            if (validacaoUtil.isFieldEmpty(impostos)) {
-                impostos.requestFocus();
-                impostos.setError("Digite os Impostos");
-                return;
-            }
-        } else {
-            try {
-                //produtonegocio.cadastrarProduto(nomeString);
-                guiUtil.toastLong(getApplicationContext(), "Cadastro realizado com sucesso");
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+//            if (validacaoUtil.isFieldEmpty(nome)) {
+//                nome.requestFocus();
+//                nome.setError("Digite seu nome");
+//                return;
+//            }
+//            if (validacaoUtil.isFieldEmpty(valor)) {
+//                valor.requestFocus();
+//                valor.setError("Digite o Valor");
+//                return;
+//            }
+//            if (validacaoUtil.isFieldEmpty(quantidade)) {
+//                quantidade.requestFocus();
+//                quantidade.setError("Digite a Quantidade de Produtos");
+//                return;
+//            }
+//            if (validacaoUtil.isFieldEmpty(tamanhoPeso)) {
+//                tamanhoPeso.requestFocus();
+//                tamanhoPeso.setError("Digite o Tamanho ou o Peso do Produto");
+//                return;
+//            }
+//            if (validacaoUtil.isFieldEmpty(origem)) {
+//                origem.requestFocus();
+//                origem.setError("Digite a Origem do Produto");
+//                return;
+//            }
+//            if (validacaoUtil.isFieldEmpty(impostos)) {
+//                impostos.requestFocus();
+//                impostos.setError("Digite os Impostos");
+//                return;
+//            } else {
+//                try {
+            produtonegocio.cadastrarProduto(nomeString);
+            //produtonegocio.cadastrarProduto(nomeString, valorString, quantidadeString, tamanhoPesoString, origemString, impostosString);
+                    guiUtil.toastLong(getApplicationContext(), "Cadastro realizado com sucesso");
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
 
-            } catch (Exception exception) {
-                guiUtil.toastLong(getApplicationContext(), exception.getMessage());
-            }
+//                } catch (Exception exception) {
+//                    guiUtil.toastLong(getApplicationContext(), exception.getMessage());
+//                }
+//            }
         }
-//    }else if (v.getId() == R.id.tvVoltar){
-//        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-//        startActivity(intent);
     }
 }

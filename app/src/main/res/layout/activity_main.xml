@@ -6,18 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2b475e"
-    tools:context="com.example.matheus.worldeasy.usuario.gui.RegistroActivity">
+    tools:context="com.example.matheus.worldeasy.usuario.gui.MainActivity">
 
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/worldeasy"
-        android:id="@+id/imageView"
-        android:layout_above="@+id/tx_nome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Procurar Produtos"
@@ -25,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
         android:id="@+id/btn_procurar_produtos"
-        android:background="@color/colorAccent"
+        android:background="@drawable/fundo_botao"
         android:layout_alignBottom="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -37,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_anunciar_produtos"
-        android:background="@color/colorAccent"
+        android:background="@drawable/fundo_botao"
         android:layout_alignBaseline="@+id/btn_procurar_produtos"
         android:layout_alignBottom="@+id/btn_procurar_produtos"
         android:layout_alignParentRight="true"
@@ -56,6 +46,22 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/toolbar2" />
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/toolbar2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/worldeasy"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

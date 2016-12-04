@@ -2,19 +2,20 @@ package com.example.matheus.worldeasy.produto.dominio;
 
 
 public class Produto {
-    private long _id;
+    private long _idProduto;
     private String Nome;
-    private int Valor;
-    private int ValorComImposto;
-    private int Quantidade;
+    private String Valor;
+    private String ValorComImposto;
+    private String Quantidade;
     private String Origem;
     private String Impostos;
     private String TamanhoPeso;
-    private String idUsuario;
+    private Long idUsuario;
 
     public Produto(){}
 
-    public Produto(long _id, String nome, int valor, int valorComImposto, int quantidade, String origem, String impostos, String tamanhoPeso, String idUsuario){
+    public Produto(long _id, String nome, String valor, String valorComImposto, String quantidade, String origem, String impostos, String tamanhoPeso, Long idUsuario){
+        this._idProduto =_id;
         this.Nome=nome;
         this.Valor=valor;
         this.ValorComImposto=valorComImposto;
@@ -26,17 +27,17 @@ public class Produto {
 
     }
 
-    public long get_id(){return _id;}
+    public long get_idProduto(){return _idProduto;}
 
-    public void set_id(long _id){this._id=_id;}
+    public void set_idProduto(long _id){this._idProduto=_id;}
 
     public String getNome(){return Nome;}
 
     public void setNome(String nome){this.Nome=nome;}
 
-    public int getValor(){return this.Valor;}
+    public String getValor(){return this.Valor;}
 
-    public void setValor(int valor){this.Valor=valor;}
+    public void setValor(String valor){this.Valor=valor;}
 
     public String getOrigem(){return this.Origem;}
 
@@ -50,15 +51,15 @@ public class Produto {
 
     public void setTamanhoPeso(String tamanhoPeso){this.TamanhoPeso=tamanhoPeso;}
 
-    public int getQuantidade(){return this.Quantidade;}
+    public String getQuantidade(){return this.Quantidade;}
 
-    public void setQuantidade(int quantidade){this.Quantidade=quantidade;}
+    public void setQuantidade(String quantidade){this.Quantidade=quantidade;}
 
-    public int getValorComImposto(){return this.ValorComImposto;}
+    public String getValorComImposto(){return this.ValorComImposto;}
 
-    public void setValorComImposto(int valorComImposto){this.ValorComImposto=valorComImposto;}
+    public void setValorComImposto(String valorComImposto){this.ValorComImposto=valorComImposto;}
 
-    public String getIdUsuario(){return this.idUsuario;}
+    public long getIdUsuario(){return idUsuario;}
 
-    public void setIdUsuario(String idUsuario){this.idUsuario=idUsuario;}
+    public void setIdUsuario(long idUsuario){this.idUsuario=idUsuario;}
 }

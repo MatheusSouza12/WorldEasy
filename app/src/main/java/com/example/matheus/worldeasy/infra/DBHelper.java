@@ -17,25 +17,30 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String COLUNA_EMAIL="email";
     public static final String COLUNA_SENHA="senha";
     public static final String COLUNA_CPF="cpf";
+    public static final String COLUNA_NOMEDAEMPRESA="nomedaempresa";
+    public static final String COLUNA_CPFOUCNPJ="cpfoucnpj";
+    public static final String COLUNA_PAIS="pais";
+    public static final String COLUNA_ESTADO="estado";
+    public static final String COLUNA_CIDADE="cidade";
+
 
 
     //atributos da tabela Produto
-
     public static final String TABELA_PRODUTOS="produtos";
     public static final String COLUNA_ID_PRODUTO="_id";
     public static final String COLUNA_NOME_PRODUTO="nome";
     public static final String COLUNA_PRECO ="valor";
-    public static final String COLUNA_PRECO_COM_IMPOSTO ="valor com imposto";
+    public static final String COLUNA_PRECO_COM_IMPOSTO ="valorcomimposto";
     public static final String COLUNA_QUANTIDADE="quantidade";
     public static final String COLUNA_IMPOSTOS="impostos";
     public static final String COLUNA_ORIGEM="origem";
     public static final String COLUNA_TAMANHO_PESO="tamanho ou peso";
-    public static final String COLUNA_ID_USUARIO="id_usuario";
+    public static final String USUARIO_ID="id_usuario";
 
 
 
     public DBHelper(Context context){
-        super(context, DB_NOME,null, DB_VERSAO);
+        super(context, DB_NOME, null, DB_VERSAO);
     }
 
     public void onCreate(SQLiteDatabase db){
@@ -44,18 +49,23 @@ public class DBHelper extends SQLiteOpenHelper{
                 + COLUNA_NOME + " TEXT,"
                 + COLUNA_EMAIL + " TEXT,"
                 + COLUNA_SENHA+ " TEXT,"
-                + COLUNA_CPF + " INT);");
+                + COLUNA_CPF + " INT,"
+                + COLUNA_NOMEDAEMPRESA + " TEXT,"
+                + COLUNA_CPFOUCNPJ + " INT,"
+                + COLUNA_PAIS + " TEXT,"
+                + COLUNA_ESTADO + " TEXT,"
+                + COLUNA_CIDADE + " TEXT);");
 
         db.execSQL("CREATE TABLE " + TABELA_PRODUTOS + "("
                 + COLUNA_ID_PRODUTO + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COLUNA_NOME_PRODUTO + " TEXT,"
-                //+ COLUNA_PRECO + " DOUBLE,"
+                + COLUNA_PRECO + " DOUBLE,"
                 + COLUNA_PRECO_COM_IMPOSTO + " DOUBLE,"
                 + COLUNA_QUANTIDADE + " DOUBLE,"
                 + COLUNA_IMPOSTOS + " TEXT,"
                 + COLUNA_ORIGEM + " TEXT,"
                 + COLUNA_TAMANHO_PESO + " DOUBLE,"
-                + COLUNA_ID_USUARIO + " INTEGER);");
+                + USUARIO_ID + " INTEGER);");
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

@@ -19,14 +19,14 @@ public class produtoDAO {
 
         ContentValues values=new ContentValues();
 
+
         values.put(dbHelper.COLUNA_NOME_PRODUTO, produto.getNome());
-        values.put(dbHelper.COLUNA_IMPOSTOS, produto.getImpostos());
-        values.put(dbHelper.COLUNA_ORIGEM, produto.getOrigem());
-        values.put(dbHelper.COLUNA_PRECO, produto.getValor());
-        values.put(dbHelper.COLUNA_PRECO_COM_IMPOSTO, produto.getValorComImposto());
-        values.put(dbHelper.COLUNA_TAMANHO_PESO, produto.getTamanhoPeso());
-        values.put(dbHelper.COLUNA_QUANTIDADE, produto.getQuantidade());
-        values.put(dbHelper.COLUNA_ID_USUARIO, produto.getIdUsuario());
+//        values.put(dbHelper.COLUNA_IMPOSTOS, produto.getImpostos());
+//        values.put(dbHelper.COLUNA_ORIGEM,produto.getOrigem());
+//        values.put(dbHelper.COLUNA_PRECO, produto.getValor());
+//        values.put(dbHelper.COLUNA_PRECO_COM_IMPOSTO, produto.getValorComImposto());
+//        values.put(dbHelper.COLUNA_TAMANHO_PESO, produto.getTamanhoPeso());
+//        values.put(DBHelper.COLUNA_QUANTIDADE, produto.getQuantidade());
 
         String tabela= DBHelper.TABELA_PRODUTOS;
 
@@ -37,15 +37,15 @@ public class produtoDAO {
 
     private Produto criarProduto(Cursor cursor){
         Produto produto = new Produto();
-        produto.set_id(cursor.getInt(0));
+        produto.set_idProduto(cursor.getInt(0));
         produto.setNome(cursor.getString(1));
-        produto.setValor(cursor.getInt(2));
-        produto.setValorComImposto(cursor.getInt(3));
-        produto.setQuantidade(cursor.getInt(4));
+        produto.setValor(cursor.getString(2));
+        produto.setValorComImposto(cursor.getString(3));
+        produto.setQuantidade(cursor.getString(4));
         produto.setImpostos(cursor.getString(5));
         produto.setOrigem(cursor.getString(6));
         produto.setTamanhoPeso(cursor.getString(7));
-        produto.setIdUsuario(cursor.getString(8));
+        produto.setIdUsuario(cursor.getLong(8));
 
         return produto;
     }

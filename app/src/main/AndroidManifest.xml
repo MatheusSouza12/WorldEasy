@@ -2,12 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.matheus.worldeasy">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--<meta-data-->
+            <!--android:name="com.matheus.APPLICATION_ID"-->
+            <!--android:value="@string/parse_app_id" />-->
+        <!--<meta-data-->
+            <!--android:name="com.parse.CLIENT_KEY"-->
+            <!--android:value="@string/parse_client_key" />-->
+
         <activity android:name=".usuario.gui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +42,10 @@
         <activity
             android:name=".produto.gui.AnunciarProdutoActivity"
             android:label="@string/title_activity_anunciar_produto"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".usuario.gui.RegistroFornecedorActivity"
+            android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme"></activity>
     </application>
 

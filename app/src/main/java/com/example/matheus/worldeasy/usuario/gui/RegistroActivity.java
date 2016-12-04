@@ -21,22 +21,12 @@ public class RegistroActivity extends AppCompatActivity {
     Validacao validacaoUtil = Validacao.getValidacaoUtil();
     GuiUtil guiUtil = GuiUtil.getGuiUtil();
 
-//    private Button registrar;
-//    private EditText email, senha;
-//    private TextView voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-
-//        registrar=(Button)findViewById(btn_registrar);
-//        email=(EditText)findViewById(R.id.tx_email);
-//        senha=(EditText)findViewById(R.id.tx_senha);
-//        voltar=(TextView)findViewById(R.id.tvVoltar);
-//        registrar.setOnClickListener(this);
-//        voltar.setOnClickListener(this);
 
     }
     public void onButtonClickUsuario(View v) {

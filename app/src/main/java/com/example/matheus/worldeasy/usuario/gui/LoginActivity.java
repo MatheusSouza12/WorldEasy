@@ -4,9 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import com.example.matheus.worldeasy.R;
 import com.example.matheus.worldeasy.infra.GuiUtil;
@@ -34,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void onButtonClick(View v){
 
-        if (v.getId()==R.id.btn_entrar) {
+        if (v.getId()==R.id.btn_CadastrarFornecedor) {
             EditText usuarioEmail = (EditText)findViewById(R.id.tx_email);
             EditText usuarioSenha = (EditText)findViewById(R.id.tx_senha);
             String email = usuarioEmail.getText().toString();

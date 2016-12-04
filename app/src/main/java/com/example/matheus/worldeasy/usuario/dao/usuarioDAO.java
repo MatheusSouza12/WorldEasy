@@ -36,6 +36,30 @@ public class usuarioDAO {
 
         return id;
     }
+//    public long inserirFornecedor(Usuario usuario){
+//        SQLiteDatabase db=helper.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        String nomedaempresa=DBHelper.COLUNA_NOMEDAEMPRESA;
+//        String cpfoucnpj=DBHelper.COLUNA_CPFOUCNPJ;
+//        String pais=DBHelper.COLUNA_PAIS;
+//        String estado=DBHelper.COLUNA_ESTADO;
+//        String cidade=DBHelper.COLUNA_CIDADE;
+//
+//        values.put(nomedaempresa, usuario.getNomedaempresa());
+//        values.put(cpfoucnpj, usuario.getCpfoucnpj());
+//        values.put(pais, usuario.getPais());
+//        values.put(estado, usuario.getEstado());
+//        values.put(cidade, usuario.getCidade());
+//
+//        String tabela = DBHelper.TABELA_USUARIO;
+//
+//        long id = db.insert(tabela, null, values);
+//        db.close();
+//
+//        return  id;
+//
+//    }
     public Usuario getUsuario(String email, String senha) {
         SQLiteDatabase db = helper.getReadableDatabase();
 
@@ -54,7 +78,6 @@ public class usuarioDAO {
     }
     public Usuario getUsuario(Usuario usuario) {
         SQLiteDatabase db = helper.getReadableDatabase();
-
         String email = usuario.getEmail();
         String senha = usuario.getSenha();
 
@@ -69,20 +92,20 @@ public class usuarioDAO {
         return usuarioVerificado;
     }
 
-    public Usuario getUsuario(String email) {
-        SQLiteDatabase db = helper.getReadableDatabase();
-
-        Cursor cursor = db.query(helper.TABELA_USUARIO,new String[]{" * "}, " email=?", new String[]{email}, null, null, null);
-
-        Usuario usuario = null;
-        if  (cursor.moveToFirst()){
-            usuario = criarUsuario(cursor);
-        }
-        cursor.close();
-        db.close();
-        return usuario;
-
-    }
+//    public Usuario getUsuario(int email) {
+//        SQLiteDatabase db = helper.getReadableDatabase();
+//
+//        Cursor cursor = db.query(helper.TABELA_USUARIO,new String[]{" * "}, " email=?", new String[]{email}, null, null, null);
+//
+//        Usuario usuario = null;
+//        if  (cursor.moveToFirst()){
+//            usuario = criarUsuario(cursor);
+//        }
+//        cursor.close();
+//        db.close();
+//        return usuario;
+//
+//    }
 
     private Usuario criarUsuario(Cursor cursor) {
         Usuario usuario = new Usuario();

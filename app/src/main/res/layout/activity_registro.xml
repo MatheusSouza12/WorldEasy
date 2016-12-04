@@ -12,7 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:background="#F8F8FF"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="12dp"
         android:ems="10"
         android:hint="Senha"
         android:layout_gravity="center_horizontal"
@@ -30,7 +31,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="CPF"
-        android:background="#F8F8FF"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="12dp"
         android:ems="10"
         android:id="@+id/tx_cpf"
         android:layout_below="@+id/tx_senha"
@@ -40,28 +42,12 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Email"
-        android:background="#F8F8FF"
-        android:ems="10"
-        android:id="@+id/tx_email"
-        android:layout_marginBottom="13dp"
-        android:singleLine="true"
-        android:selectAllOnFocus="true"
-        android:layout_above="@+id/tx_senha"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
     <Button
         android:text="Registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_registrar"
+        android:background="@drawable/fundo_botao"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_marginTop="49dp"
         android:layout_below="@+id/tx_cpf"
@@ -76,7 +62,8 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:hint="Nome"
-        android:background="#F8F8FF"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="12dp"
         android:ems="10"
         android:id="@+id/tx_nome"
         android:layout_above="@+id/tx_email"
@@ -97,7 +84,6 @@
 
     <TextView
         android:text="Voltar"
-        android:background="@color/colorAccent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tvVoltar"
@@ -105,5 +91,21 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:onClick="onButtonClickUsuario"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Email"
+        android:background="@drawable/fundo_caixa_texto"
+        android:padding="12dp"
+        android:ems="10"
+        android:id="@+id/tx_email"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:selectAllOnFocus="true"
+        android:layout_above="@+id/tx_senha"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
